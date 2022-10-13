@@ -24,18 +24,25 @@ int main()
 
     //scanf
     printf("\n\nTo set the delay (in ms), type in an integer number and press return\n");
-    int delay_ms;
-    int parsed = scanf("%d", &delay_ms);
+    int delay_ms1;
+    int parsed1 = scanf("%d", &delay_ms1);
     
-    printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms);
+    printf("You entered %d correct integer values. The value was %dms\n", parsed1, delay_ms1);
+
+    printf("\n\nTo set the delay (in ms), type in an integer number and press return\n");
+    int delay_ms2;
+    int parsed2 = scanf("%d", &delay_ms2);
+    
+    printf("You entered %d correct integer values. The value was %dms\n", parsed2, delay_ms2);
+
 
     // Stop
-    while (parsed > 0) {
-        wait_us(delay_ms * 1000);
+    while (parsed1 && parsed2 > 0) {
+        wait_us(delay_ms1 * 1000);
         led1 = 1;
         led2 = 1;
         led3 = 1;
-        wait_us(delay_ms * 1000);
+        wait_us(delay_ms2 * 1000);
         led1 = 0;
         led2 = 0;
         led3 = 0;        
